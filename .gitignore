@@ -10,6 +10,7 @@ build/
 .env
 .env.local
 *.key
+application-local.properties
 
 # IDE
 .idea/
@@ -21,3 +22,4 @@ Thumbs.db
 
 # Logs
 *.log
+
