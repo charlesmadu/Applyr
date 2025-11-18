@@ -42,7 +42,7 @@ public class Job {
     private String URL;
 
     @Column(name = "DATE", nullable = false, unique = false)
-    private LocalDate dateApplied;
+    private LocalDate date;
 
     @Column(name = "NOTES", length = 1000, nullable = true, unique = false)
     private String notes;
@@ -53,13 +53,13 @@ public class Job {
 
     protected Job(){};
 
-    public Job(String title, String company, Integer salary, String location, String URL, LocalDate dateApplied, String notes, ApplicationStatus status){
+    public Job(String title, String company, Integer salary, String location, String URL, LocalDate date, String notes, ApplicationStatus status){
         this.title = title;
         this.company = company;
         this.salary = salary;
         this.location = location;
         this.URL = URL;
-        this.dateApplied = dateApplied;
+        this.date = date;
         this.notes = notes;
         this.status = status;
     }
@@ -68,7 +68,7 @@ public class Job {
     public String toString(){
         return String.format(
             "Job[id=%d, Title=%s, Company=%s, Salary=%d, Location=%s, URL=%s, DateApplied=%s, Notes=%s, Status=%s]",
-        this.id, this.title, this.company, this.salary, this.location, this.URL, this.dateApplied, this.notes, this.status);
+        this.id, this.title, this.company, this.salary, this.location, this.URL, this.date, this.notes, this.status);
     }
 
     // Getter Methods
@@ -98,7 +98,7 @@ public class Job {
     }
 
     public LocalDate getDate(){
-        return this.dateApplied;
+        return this.date;
     }
 
     public String getNotes(){
@@ -132,7 +132,7 @@ public class Job {
     }
 
     public void setDate(LocalDate date){
-        this.dateApplied = date;
+        this.date = date;
     }
 
     public void setNotes(String notes){
