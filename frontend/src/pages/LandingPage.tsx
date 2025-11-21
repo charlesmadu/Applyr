@@ -8,7 +8,7 @@ const LandingPage = () => {
         <a href="#" className="flex items-center">
           <img
           
-            src="/src/images/applyr-logo.svg"
+            src="/images/applyr-logo.svg"
             className="h-6 mr-3 sm:h-9"
             alt="Applya Logo"
           />
@@ -125,7 +125,7 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-        <img src="/public/images/hero.png" alt="hero image" />
+        <img src="/images/hero.png" alt="hero image" />
       </div>
     </div>
   </section>
@@ -326,7 +326,7 @@ const LandingPage = () => {
         <div className="w-full bg-purple-100 rounded-lg p-5">
           <img
             className="w-full rounded-lg shadow-lg"
-            src="/public/images/dashboard.jpg"
+            src="/images/dashboard.jpg"
             alt="Dashboard Image"
           />
         </div>
@@ -364,7 +364,7 @@ const LandingPage = () => {
           className="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white"
         >
           <img
-            src="/public/images/applyr-logo.svg"
+            src="/images/applyr-logo.svg"
             className="h-6 mr-3 sm:h-9"
             alt="Appylr Logo"
           />

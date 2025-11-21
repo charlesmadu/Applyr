@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import StatCard from '../components/StatCard';
+import WeeklyTracker from '../components/WeeklyTracker';
+import AICVTailor from '../components/AICVTailor';
+import JobBoardWidget from '../components/JobBoardWidget';
+import ApplicationTable from '../components/ApplicationTable';
 
 import { 
   LayoutDashboard, 
@@ -37,6 +41,7 @@ const Dashboard = () => {
         />
       )}
 
+      {/* Sidebar */}
       <aside className={`
         fixed lg:static inset-y-0 left-0 z-50 w-64 bg-white border-r border-slate-200 
         transform transition-transform duration-300 ease-in-out
@@ -107,8 +112,7 @@ const Dashboard = () => {
         </header>
 
         <main className="flex-1 p-4 sm:p-8 overflow-y-auto">
-          <div className="max-w-6xl mx-auto space-y-8">
-            
+          <div className="max-w-6xl mx-auto flex flex-col gap-8">
             {/* 2. Stats Grid Section */}
             <section>
               <h2 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">At a Glance</h2>
@@ -141,9 +145,25 @@ const Dashboard = () => {
               </div>
             </section>
 
-            <div className="p-8 border-2 border-dashed border-slate-300 rounded-xl flex items-center justify-center text-slate-400">
-              Weekly Tracker & AI Tailor Will Go Here
-            </div>
+            {/* 3. Analytics & Tools Section (New) */}
+            <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto lg:h-96">
+              <div className="lg:col-span-2 h-full">
+                <WeeklyTracker />
+              </div>
+              <div className="h-full">
+                <AICVTailor />
+              </div>
+            </section>
+
+            {/* 4. Applications & Job Board Section */}
+            <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
+              <div className="lg:col-span-2">
+                <ApplicationTable />
+              </div>
+              <div className="lg:col-span-1">
+                <JobBoardWidget />
+              </div>
+            </section>
 
           </div>
         </main>
